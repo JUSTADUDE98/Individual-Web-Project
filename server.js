@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const server = express();
 const port = 3000;
 
@@ -10,8 +11,10 @@ server.get('/', (req, res) => {
 
 server.post('/submit-form', (req, res) => {
     const username = req.body.username; // access form data
+
+    console.log(username);
     // Add validation logic here
-    res.send(`Username is $dtran28`);
+    res.send('Form submitted successfully!');
 });
 
 server.listen(port, () => {
