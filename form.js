@@ -3,6 +3,8 @@ const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('email');
 const messageInput = document.querySelector('#message');
 
+
+
 form.addEventListener('submit', (event) => {
     event.preventDefault; 
 
@@ -26,5 +28,6 @@ form.addEventListener('submit', (event) => {
 });
 
 function isEmailValid(email) {
-    const emailRegex = /^\w=@
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
 }
